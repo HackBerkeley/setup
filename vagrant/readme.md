@@ -20,4 +20,4 @@ Once the machine is booted - it will configure itself with the required commands
 Run the command ```vagrant ssh``` 
 
 ## Web Server
-The machines IP address is 192.168.*.*
+The machines IP address is 192.168.42.25
