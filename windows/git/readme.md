@@ -1,1 +1,3 @@
-#git setup
+# Git setup
+
+    cinst git
