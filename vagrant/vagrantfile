@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Configurable variables
+$hostname  = "vagrant-hackberkeley"
+$http_port = 8080
+
+Vagrant.configure("2") do |config|
+    # Basics.
+    config.vm.box     = "precise32"
+    config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    # Networking.
+    config.vm.hostname = $hostname
+    config.vm.network :private_network, ip: "192.168.42.25"
+    config.vm.network :forwarded_port, guest: 80, host: $http_port, 
+        auto_correct: true
+
+    # Provisioning.
+    #Let's Ignore the sh file for a while. 
+    #config.vm.provision :shell, :path => "vagrantstrap.sh"
+end
